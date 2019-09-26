@@ -20,13 +20,12 @@ protocol PresenterLifeCycleProtocol {
     @objc
     optional func viewDidAppear()
     @objc
-    optional func didReceiveMemoryWarning()
-    @objc
     optional func viewWillDisappear()
     @objc
     optional func viewDidDisappear()
 }
 
-protocol BasePresenterProtocol: class, PresenterLifeCycleProtocol {
+protocol BasePresenterProtocol: PresenterLifeCycleProtocol {
     
+    init(view: BaseViewProtocal, model: BaseModelProtocal)
 }

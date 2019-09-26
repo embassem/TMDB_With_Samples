@@ -13,9 +13,8 @@ protocol BaseViewProtocal: ViewLoadable, ViewFetchable, ViewMessageable {
     
 }
 
-
 @objc
-protocol ViewLoadable:class {
+protocol ViewLoadable {
     
     // MARK: - Load Indicator
     @objc
@@ -25,18 +24,18 @@ protocol ViewLoadable:class {
 }
 
 @objc
-protocol ViewFetchable:class {
+protocol ViewFetchable {
     
     // MARK: - Load Data
     @objc
-    optional func fetchDataSuccess(date:Any)
+    optional func loadDataSuccess(date:Any)
     @objc
-    optional func fetchDataFailed(with error: Error?)
+    optional func loadDataFailed(with error: Error?)
     
 }
 
 @objc
-protocol ViewMessageable:class {
+protocol ViewMessageable {
     
     // MARK: - Load Indicator
     @objc

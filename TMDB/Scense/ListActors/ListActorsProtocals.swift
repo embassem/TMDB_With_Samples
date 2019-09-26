@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+protocol ListActorsPresenterProtocal: BasePresenterProtocol {
+    
+    var currentPage:Int { get set }
+    
+    func activateSearch()
+    func cancelSearch()
+    func loadActors()
+    func refreshActores()
+    func loadMoreActores()
+    
+}
+
+protocol ListActorsViewProtocal:BaseViewProtocal {
+    
+}
+
+protocol ListActorsModelProtocal:BaseModelProtocal {
+    func getActors(forPage page:Int , compelation: Result<Any,Error>)
+}

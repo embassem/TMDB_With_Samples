@@ -11,7 +11,7 @@ import Moya
 
 extension NetworkManager {
     
-    func getActors(completion: @escaping (
+    func getActors(pageNumber:Int, completion: @escaping (
         _ result: Swift.Result<APIResponse<Person>, NetworkError>,
         _ statusCode: StatusCode?
         ) -> Void) {

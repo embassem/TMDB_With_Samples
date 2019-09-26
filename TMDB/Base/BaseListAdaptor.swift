@@ -1,24 +1,24 @@
 //
-//  baseListAdaptor.swift
+//  BaseViewProtocal
 //  TMDB
 //
-//  Created by Bassem Abbas on 9/24/19.
+//  Created Bassem Abbas on 9/24/19.
 //  Copyright © 2019 Ibtikar Technologies, Co. Ltd. All rights reserved.
 //
 
 import Foundation
 
-protocol listAdapterDelegate:class {
-    
-}
+//protocol listAdapterDelegate:class {
+//    
+//}
 
-protocol BaseListAdapter:class {
+protocol BaseListAdapterProtocal:class {
     associatedtype DataType
-    associatedtype AdapterDelegate where AdapterDelegate:listAdapterDelegate
+//    associatedtype AdapterDelegate where AdapterDelegate:listAdapterDelegate
 
     var list: [DataType]? { get set}
     
-    var delegate:AdapterDelegate? { get set }
+//    var delegate:AdapterDelegate? { get set }
     
     var reloadData:(() -> Void)? { get set}
 
