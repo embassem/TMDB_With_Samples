@@ -8,6 +8,6 @@
 
 import Foundation
 
-class BaseModel: BaseModelProtocal {
+class BaseModel:NSObject, BaseModelProtocal {
     
 }
