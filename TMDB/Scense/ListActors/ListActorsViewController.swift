@@ -8,6 +8,16 @@
 
 import UIKit
 
-class ListActorsViewController: UIViewController {
+class ListActorsPresenter:BasePresenter {
+    
+}
 
+protocol ListView:BaseViewProtocal {
+    
+}
+class ListActorsViewController: BaseViewController<ListActorsPresenter>,ListView{
+
+    func loadDataSuccess(date: Any) {
+        print("test")
+    }
 }

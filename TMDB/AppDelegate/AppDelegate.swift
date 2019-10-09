@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupNetworking()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let view = ListActorsViewController()
+        window?.rootViewController = view
+        window?.makeKeyAndVisible()
+        
+        view.loadDataSuccess(date: Data())
         return true
 	}
 

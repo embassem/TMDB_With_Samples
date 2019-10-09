@@ -16,7 +16,7 @@ typealias StatusCode = Int
 
 class NetworkManager {
     
-    static var shared: NetworkManager!
+    static let shared: NetworkManager = { NetworkManager(config: .defaults)}()
     
     var networkConfig: NetworkDefaults!
     

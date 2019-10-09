@@ -15,7 +15,7 @@ class BaseViewController<Presenter:BasePresenterProtocol>: UIViewController, Bas
     
     // MARK: - Private Variables
     
-    var presenter:Presenter!
+    private var presenter:Presenter!
     
     // MARK: - Computed Variables
     
